@@ -113,14 +113,17 @@ var sendEmail = function () {
     }
 
     function _sendAjax(form) {
-        var data = _JSON$stringify(form.serializeArray());
+        //var data = JSON.stringify(form.serializeArray());
+        var posName = $("#name").val();
+        var posEmail = $("#email").val();
+        var posText = $("#texarial").val();
         $.ajax({
             type: "POST",
             url: "assets/js/send.php",
-            data: data,
+            data: {"posName": posName, "posEmail": posEmail, "posText": posText},
             cache: false,
             success: function success(s) {
-                console.log(s);
+                console.log(s, "Все ок");
             }
 
         });

@@ -77,18 +77,18 @@ if(empty($_POST['js'])){
     {
 
         $to = "Govoruxin3@mail.ru";
-        $message = " человек по имени  $posName отправил вам сообщения с вашего сайта \n\n$posText";
+        $mes = " человек по имени  $posName отправил вам сообщения с вашего сайта \n\n$posText";
 
         $from = $posEmail;
-        $subject = '=?utf-8?B?'.base64_encode('сообщение с вашего сайта').'?=';
+        $sub = '=?utf-8?B?'.base64_encode('сообщение с вашего сайта').'?=';
         $headers = 'From: '.$from.'
 ';
         $headers .= 'MIME-Version: 1.0
 ';
         $headers .= 'Content-type: text/plain; charset=utf-8
 ';
-        mail($to, $subject, $message,"$from Content-type: text/plain",$headers);
-        echo $posEmail; //�� Ok!
+        mail($to, $sub, $mes, $headers);
+        echo "1"; //�� Ok!
     }
     else
     {
