@@ -11,9 +11,9 @@ var map = (function () {
             isDraggable = false;
         } else {
             isDraggable = true;
-        }
+        };
 
-        let mapOptions = {
+        var mapOptions = {
             center: {
                 lat: 55.853396,
                 lng: 37.5002
@@ -111,7 +111,7 @@ var map = (function () {
                 "elementType": "all",
                 "stylers": [{"color": "#6a6966"}, {"visibility": "simplified"}]
             }]
-        }
+        };
 
 
         var map = new google.maps.Map(mapDiv, mapOptions),
